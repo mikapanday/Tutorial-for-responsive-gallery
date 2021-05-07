@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Image Upload
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<!-- Need to include a slide down bar of what child the user is posting about -->
+
+<ion-content padding>
+  <ion-content>
+    <ion-fab vertical="top" horizontal="center" slot="fixed">
+      <ion-fab-button (click)="addPhotoToGallery()">
+        <ion-icon name="camera"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-content>
+  <!-- need space between this-- once a photo is taken I think it should generate an ionic card
+  Ionic card with allow user to first <ion-card> with the img just taken, then include <ion-card-title> and <ion-card-content>
+    and then at the end add a buttom to upload post-- make a service for storage of post
+
+    @model
+      child's name (this is where in the database the post will be stored)
+      img
+      post's title
+      content
+  -->
+  <ion-grid>
+    <ion-row>
+    <ion-col size="10"
+      *ngFor="let photo of photoService.photos; index as position">
+        <ion-img [src]="photo.webviewPath"></ion-img>
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+
+<ion-item>
+  <ion-label floating>Description</ion-label>
+  <ion-input type="text" [(ngModel)]="photoDescription"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label floating>Child's Name</ion-label>
+  <ion-input type="text" [(ngModel)]="child_name"></ion-input>
+</ion-item>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-button fill="clear" expand="full" color="light" (click)="uploadPost()">
+      <ion-icon slot="start" name="camera"></ion-icon>
+      Upload Post</ion-button>
+  </ion-toolbar>
+</ion-footer>

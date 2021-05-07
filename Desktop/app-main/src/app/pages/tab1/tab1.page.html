@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      PhotoShare
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <ion-button margin-top (click)="signIn()" *ngIf="!action">Login</ion-button>
+  <ion-card *ngIf="action">
+
+    <h1 text-center>Photos will be displayed here based of who user is following-- first I am going to just display photos that the user themselves posted</h1>
+    <ion-grid>
+      <ion-row>
+      <ion-col size="6"
+        *ngFor="let photo of photoService.photos; index as position">
+          <ion-img [src]="photo.webviewPath"></ion-img>
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-card-header>
+      <ion-button (click)="getUserInfo()">Get User Details</ion-button>
+      <!--<ion-button (click)="refreshToken()">Refresh Token</ion-button>-->
+      <ion-button (click)="signOut()">Sign Out</ion-button>
+    </ion-card-header>
+
+    <ion-card *ngIf="userInfo">
+      <ion-card-header>
+        User Info
+      </ion-card-header>
+      <ion-card-content>
+        {{userInfo | json}}
+      </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="action">
+      <ion-card-header>
+        Action Data
+      </ion-card-header>
+      <ion-card-content>
+        {{action | json}}
+      </ion-card-content>
+    </ion-card>
+  </ion-card>
+  <ion-list lines="none">
+    <ion-list-header>
+

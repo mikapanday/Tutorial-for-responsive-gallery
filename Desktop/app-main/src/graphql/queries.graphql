@@ -1,0 +1,19 @@
+type Topic @model {
+  id: ID!
+  title: String!
+  description: String
+  comments: [Comment] @connection(keyName: "TopicComments")
+  tags: [Tag]
+}
+
+type Tag @model {
+  id: ID!
+  tag: String
+  topics: [Topic]
+}
+
+type Comment @model {
+  id: ID!
+  text: String
+  topic: Topic @connection(keyName: "TopicComments")
+}

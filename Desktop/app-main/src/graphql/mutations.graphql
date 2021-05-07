@@ -1,0 +1,5 @@
+mutation {
+  createTopic(input:{title:"Investigate Amplify"}) {
+    id
+  }
+}
