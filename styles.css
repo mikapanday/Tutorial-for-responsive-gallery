@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+
+.hero-section {
+  background-color: blue;
+  height: 100px;
+  width: 100%;
+}
+
+.container {
+  width: 20%;
+}
