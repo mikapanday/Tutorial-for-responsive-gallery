@@ -11,3 +11,7 @@ body {
 .container {
   width: 20%;
 }
+
+.container img {
+  width: 100%;
+}
