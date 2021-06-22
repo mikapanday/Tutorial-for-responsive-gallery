@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Welcome to Dorothea's Portal
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form">
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-center>
+
+        <span class="already">Are you a Gaurdian or apart of a careteam?</span>
+
+        <ion-button [routerLink]="['/registration2']" expand="block" color="primary">Gaurdian</ion-button>
+
+        <span class="divider line one-line">or</span>
+
+        <ion-button [routerLink]="['/registration3']" expand="block" color="danger">Careteam</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+

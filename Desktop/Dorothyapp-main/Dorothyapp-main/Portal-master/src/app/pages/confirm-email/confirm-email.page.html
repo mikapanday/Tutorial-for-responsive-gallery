@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>confirm-email</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [formGroup]="confirmForm">
+  <ion-label>Email</ion-label>
+  <ion-input aria-placeholder="Email" type="email" formControlName="email"></ion-input>
+  <ion-label>COnfirmation Code</ion-label>
+  <ion-input aria-placeholder="Confirmation Code" type="text" formControlName="code" required></ion-input>
+
+  <ion-button color="primary" (click)="confirmCode()">Confirm Code</ion-button>
+  <p>Didn't recieve a code? <a href="javascript:void(null)" (click)="sendAgain()">Send</a></p>
+
+</ion-content>

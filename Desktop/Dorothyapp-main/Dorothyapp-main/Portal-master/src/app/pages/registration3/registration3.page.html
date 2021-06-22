@@ -1,0 +1,36 @@
+<ion-content>
+  <div class="flex flex-column main-container">
+    <div class="welcome">
+      <h5>Hello, Sign up</h5>
+      <p>to your new account</p>
+    </div>
+
+    <div [formGroup]='signupForm' class="ion-text-center">
+      <ion-item class="ion-no-padding" lines="none">
+        <ion-label position="stacked">Full name</ion-label>
+        <ion-input type="text" formControlName="name" required></ion-input>
+        <div *ngIf="this.signupForm.controls.name.errors && this.submitted == true">Error</div>
+      </ion-item>
+
+      <ion-item class="ion-no-padding" lines="none">
+        <ion-label position="stacked">Email address</ion-label>
+        <ion-input type="email" formControlName="email" required></ion-input>
+      </ion-item>
+      <ion-item class="ion-no-padding" lines="none">
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input type="password" formControlName="password" required></ion-input>
+      </ion-item>
+      <ion-item class="ion-no-padding" lines="none">
+        <ion-label position="stacked">Confirm Password</ion-label>
+        <ion-input type="password" formControlName="password" required></ion-input>
+      </ion-item>
+
+      <ion-button class="apply-button" expand="block" (click)="register()">
+        Sign Up
+      </ion-button>
+    </div>
+    <div class="text ion-text-center">
+      <span>Have an account? <a [routerLink]="['/login']">Sign in</a></span>
+    </div>
+  </div>
+</ion-content>

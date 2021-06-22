@@ -8,16 +8,17 @@ import { defineCustomElements } from '@ionic/pwa-elements/loader';
 // Amplify Configuration
 import Amplify, { Auth } from 'aws-amplify';
 import Storage from '@aws-amplify/storage';
-import AWSConfig from './aws-exports';
-Storage.configure(AWSConfig);
-Auth.configure(AWSConfig);
+//import AWSConfig from './aws-exports';
+//Storage.configure(AWSConfig);
+//Auth.configure(AWSConfig);
 
 if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
+  .catch((err) => console.log(err));
 
 // Call the element loader after the platform has been bootstrapped
 defineCustomElements(window);

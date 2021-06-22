@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Image Upload
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-item *ngFor="let items of posts, let i = index">
+      <app-post-card lines="none"
+        [photo]="items.photo"
+        [user]="items.user[0].email"
+        [content]="items.content"
+        [_created]="items._created"
+      ></app-post-card>
+</ion-item>

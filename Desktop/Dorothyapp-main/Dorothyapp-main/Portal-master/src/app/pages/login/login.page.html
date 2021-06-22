@@ -1,0 +1,32 @@
+<ion-content>
+	<div class="flex flex-column main-container">
+    <div class="welcome">
+		<img class="icon">
+		<h5>Welcome back,</h5>
+		<p>login to your account</p>
+	</div>
+
+		<div [formGroup]="signinForm" class="ion-text-center">
+			<ion-item class="ion-no-padding" lines="none">
+				<ion-label position="stacked">Email address</ion-label>
+				<ion-input type="email" formControlName="email" required></ion-input>
+			</ion-item>
+			<ion-item class="ion-no-padding" lines="none">
+				<ion-label position="stacked">Password</ion-label>
+				<ion-input type="password" formControlName="password" required></ion-input>
+			</ion-item>
+			<p class="input-help">Forgot password?</p>
+
+			<ion-button class="apply-button" expand="block" (click)="login()">
+				Sign In
+			</ion-button>
+			
+		</div>
+		<div class="text ion-text-center">
+			<span
+				>Don't have an account?
+				<a [routerLink]="['/registration']">Sign up</a></span
+			>
+		</div>
+	</div>
+</ion-content>

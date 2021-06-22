@@ -1,0 +1,22 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-dorothea-dev-144920-authRole",
+      "UnauthRoleArn": "arn:aws:iam::171592768311:role/amplify-dorothea-dev-185832-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::171592768311:role/amplify-dorothea-dev-185832-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-backend-dev-185832-deployment",
+      "UnauthRoleName": "amplify-backend-dev-185832-unauthRole",
+      "StackName": "amplify-backend-dev-185832",
+      "StackId": "stack/amplify-backend-dev-185832/e03afb10-d151-11eb-8a7f-0a71dc7a3521",
+      "AmplifyAppId": "doje17izr5ct7"
+    },
+    "categories": {
+      "auth": {
+        "dorotheae10408c6": {},
+        "backend0f1ee2e2": {},
+        "userPoolGroups": {}
+      }
+    }
+  }
+}
